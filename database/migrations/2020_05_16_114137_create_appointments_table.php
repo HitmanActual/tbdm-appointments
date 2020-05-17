@@ -22,6 +22,7 @@ class CreateAppointmentsTable extends Migration
             $table->integer('queue_number')->unsigned()->nullable();
             $table->enum('status',['confirmed','cancelled']);
             $table->timestamps();
+            $table->timestamp('deleted_at')->nullable();
         });
     }
 
